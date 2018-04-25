@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<license id="f994b282-0f90-43aa-bf20-05e6c398f2aa" expiration="2117-06-01T11:24:58.9750067" type="Standard" LicenseVersion="6.0" WorkerThreads="Max" AllowedNumberOfWorkerNodes="Max" MaxMessageThroughputPerSecond="Max" Quantity="1" Edition="Enterprise" Applications="All" UpgradeProtectionExpiration="2018-06-01">
+  <name>NDDigital</name>
+  <Signature xmlns="http://www.w3.org/2000/09/xmldsig#">
+    <SignedInfo>
+      <CanonicalizationMethod Algorithm="http://www.w3.org/TR/2001/REC-xml-c14n-20010315" />
+      <SignatureMethod Algorithm="http://www.w3.org/2000/09/xmldsig#rsa-sha1" />
+      <Reference URI="">
+        <Transforms>
+          <Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature" />
+        </Transforms>
+        <DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+        <DigestValue>weUH2zQH6jbRld0szO4xITBkclE=</DigestValue>
+      </Reference>
+    </SignedInfo>
+    <SignatureValue>XxNLuyDbaZVYS9wO7qLQGzG+yWhVIhHsJIUBFyzgaTc/CRZCUGyxGaCr5LDRuBMSzsuZi7a7aDiWeOMGSSkgskhVMHYFc4tqj9bW81fbVB0kmjNQHtQaZ8KbdEiy3GpUsrWn0mT2/Ez4qOYxcyWXoFnSaGeW7gmr9Yzpq/laA2c=</SignatureValue>
+  </Signature>
+</license>

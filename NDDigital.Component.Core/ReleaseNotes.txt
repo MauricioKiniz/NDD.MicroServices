@@ -1,0 +1,40 @@
+﻿Version 2.0.0
+-----------------------------------------------------------------
+Implementações
+	1) Implementado suporte a versão 6.x do NServiceBus
+	2) Implementado validação de schema para o middleware.xml
+	3) Implementado 
+
+Ajustes necessários
+	
+
+Mudanças de versões do NSB
+	Foi migrado para a última versão do NSB a 5.2.24 e atualizado o arquivo de licenças
+
+Situações inesperadas
+	
+=======================================================================================================================================================
+
+Version 1.1.0
+-----------------------------------------------------------------
+Implementações
+	Implementado suporte a camada de transporte de mensagens via Sql Server. Sendo assim passa a ser possivel
+	escolher entre usar o MSMQ ou o Sql Server como provedor de filas onde as mensagens serão inseridas
+
+Ajustes necessários
+	1. No Registro do Windows foram inseridos duas novas entradas
+		1.1 TransportKind. Pode ter o valor 0 = MSMQ ou 1 = Sql Server, sendo que se não for criada esta entrada ele irá 
+			assumir o MSMQ como default
+		1.2 QueueDatabaseConnection. Esta entrada deve conter caso for escolhido o Sql Server como provedor de filas a url de 
+			conexão com o banco de dados onde as filas serão criadas. Todas as filas serão criadas abaixo do Schema: middleware, logo,
+			é necessário criar este schema no banco de dados antes.
+
+Mudanças de versões do NSB
+	Foi migrado para a última versão do NSB a 5.2.24 e atualizado o arquivo de licenças
+
+Situações inesperadas
+	Pode acontecer que como a versão do Particular Service Control estava apontando para o MSMQ seja necessário apontá-lo para a 
+	base onde as filas serão criadas também. Para isto na url de conexão que deve ser parametrizada nele é necessário colocar a seguinte
+	informação: Queue Schema=middleware para que o Particular Service Control crie corretamente as filas dele.
+	Exemplo de url completa.
+	Data Source=<machine>;Initial Catalog=<database>;Persist Security Info=True;User ID=sa;Password=<******>;Connect Timeout=120;Max Pool Size=100;Queue Schema=middleware
